@@ -1,13 +1,208 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.yellow {
+  color: #ffe600;
+}
+
+.dark {
+  color: #333333;
+}
+
+.mid {
+  color: #999999;
+}
+
+.light {
+  color: #eeeeee;
+}
+
+.white {
+  color: white;
+}
+
+.yellow-back {
+  background-color: #ffe600;
+}
+
+.dark-back {
+  background-color: #333333;
+}
+
+.mid-back {
+  background-color: #999999;
+}
+
+.light-back {
+  background-color: #eeeeee;
+}
+
+.white-back {
+  background-color: white;
+}
+
+.center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* flex */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* fast margins and paddings */
+
+.margin {
+  margin: 20px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-vertical {
+  margin: 20px 0;
+}
+
+.margin-horizontal {
+  margin: 0 20px;
+}
+
+.margin-large {
+  margin: 50px;
+}
+
+.margin-horizontal-large {
+  margin: 0 50px;
+}
+
+.margin-vertical-large {
+  margin: 50px 0;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.padding-horizontal {
+  padding: 0 20px;
+}
+
+.padding-vertical {
+  padding: 20px 0;
+}
+
+.padding-large {
+  padding: 50px;
+}
+
+.padding-horizontal-large {
+  padding: 0 50px;
+}
+
+.padding-vertical-large {
+  padding: 50px 0;
+}
+
+/* grid */
+
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-center {
+  align-items: center;
+}
+
+.width100 {
+  width: 100%;
+}
+
+/* others  */
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }

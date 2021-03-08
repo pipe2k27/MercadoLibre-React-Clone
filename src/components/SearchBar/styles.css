@@ -1,0 +1,13 @@
+.search-bar {
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar-logo {
+  height: 60%;
+  margin-right: 25px;
+}

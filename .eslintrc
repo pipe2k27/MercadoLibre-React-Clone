@@ -1,0 +1,8 @@
+{
+  "plugins": ["only-warn"],
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "react/prop-types": "warn"
+  }
+}
