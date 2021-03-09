@@ -13,8 +13,13 @@ const Product = ({ product }) => {
       </div>
       <div>
         <div className="flex-center-vertical search-results-price-box">
-          <p className="search-results-price">${product.price}</p>
-          {product.freeShipping && (
+          <p className="search-results-price">
+            $
+            {!product.price.decimals
+              ? product.price.amount
+              : `${product.price.amount},${product.price.decimals}`}
+          </p>
+          {product.free_shipping && (
             <img
               className="search-results-shipping"
               src={`${process.env.PUBLIC_URL}/assets/ic_shipping@2x.png`}

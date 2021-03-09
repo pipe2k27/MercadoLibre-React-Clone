@@ -49,3 +49,10 @@
   font-size: 12px;
   color: rgb(141, 141, 141);
 }
+
+.breadcrumb{
+  color: rgb(141, 141, 141);
+  font-size: 14px;
+  width: 90%;
+  margin: 16px 0 0 0;
+}

@@ -14,10 +14,10 @@ app.listen(8000, () => console.log('app is live on port 8000'));
 
 const mainUrl = 'https://api.mercadolibre.com/';
 
-router.use('/products', searchEndpoint);
+router.use('/items', searchEndpoint);
 
 app.get('/', async (req, res) => {
-  const response = await fetch(`${mainUrl}/sites/MLA/search?limit=4&q=pokemon`);
+  const response = await fetch(`${mainUrl}/sites/MLA/search?limit=4&q=rolex`);
   const data = await response.json();
   res.send(data);
 });

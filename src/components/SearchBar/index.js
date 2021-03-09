@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Input from '../Input';
 import './styles.css';
 
-const SearchBar = ({ dataSetter }) => {
+const SearchBar = () => {
   const [searchTerm, setSeacrchTerm] = useState('');
+  const history = useHistory();
 
-  const submitSearch = async () => {
-    const res = await fetch(`http://localhost:8000/products/${searchTerm}`);
-    const products = await res.json();
-    dataSetter(products);
+  const submitSearch = () => {
+    history.push(`/items?search=${searchTerm}`);
+    window.location.reload();
   };
 
   return (
@@ -22,9 +24,7 @@ const SearchBar = ({ dataSetter }) => {
         placeholder="Nunca pares de buscar"
         button
         onChange={(e) => setSeacrchTerm(e)}
-        onSubmit={() => {
-          submitSearch();
-        }}
+        onSubmit={submitSearch}
       />
     </div>
   );
