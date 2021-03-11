@@ -16,4 +16,4 @@ to run just the front end at project directory run:
 
 to run only the server cd into backend folder and run:
 
-### `nodemon server.js`
+### `node server.js`
