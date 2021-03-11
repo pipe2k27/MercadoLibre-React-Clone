@@ -13,12 +13,18 @@ const SearchBar = () => {
     window.location.reload();
   };
 
+  const goHome = () => {
+    history.push('/');
+    window.location.reload();
+  };
+
   return (
     <div className="search-bar yellow-back">
       <img
         src={`${process.env.PUBLIC_URL}/assets/Logo_ML@2x.png`}
         alt="mercado libre"
         className="search-bar-logo"
+        onClick={goHome}
       />
       <Input
         placeholder="Nunca pares de buscar"

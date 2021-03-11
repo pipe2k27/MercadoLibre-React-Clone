@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +11,7 @@ body {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #eeeeee;
 }
 
 .yellow {
@@ -200,9 +205,14 @@ body {
   position: relative;
 }
 
+
+.text-center{
+  text-align: center;
+}
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
   outline: none;
 }
+

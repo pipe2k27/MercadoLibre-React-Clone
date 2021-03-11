@@ -1,6 +1,14 @@
 import * as format from './numberFormat.js';
 
-const productFilter = (product) => {
+/**
+ * @function searchFilter this function, given a product from ML's api, returns an object with the
+ * required format and properties to be sent through the api
+ *
+ * @param {string} product obtained from api. full product.
+ * @returns {Objetc} the product with the format requested for frontend.
+ */
+
+const searchFilter = (product) => {
   const productDetails = {
     id: product.id,
     title: product.title,
@@ -16,4 +24,4 @@ const productFilter = (product) => {
   return productDetails;
 };
 
-export default productFilter;
+export default searchFilter;

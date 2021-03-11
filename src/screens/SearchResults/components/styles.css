@@ -4,14 +4,44 @@
   grid-template-columns: auto 3fr 1fr;
   background-color: white;
   border-bottom: 1px solid #ececec;
-  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in-out, top 0.15s ease-in-out, transform 0.15s ease-in, opacity 0.15s;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.search-results-product:hover{
+  z-index: 3;
+  -webkit-box-shadow: 10px 38px 45px -32px rgba(0,0,0,0.32);
+  -moz-box-shadow: 10px 38px 45px -32px rgba(0,0,0,0.32);
+  box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.12);
+  top: -5px;
+}
+
+.search-results-product-animation-true{
+transform: scale(1.6);
+opacity: 0;
+}
+
+
+.search-results .search-results-product:first-child{
+  border-radius: 4px 4px 0 0;
+}
+
+.search-results .search-results-product:last-child{
+  border-radius: 0 0 4px 4px;
 }
 
 .search-results-image-box {
   height: 160px;
   border-radius: 4px;
   display: flex;
-  align-items: center;
+  align-items: cente;
+  justify-content: center;
   justify-content: center;
   width: 160px;
   margin-right: 16px;
@@ -31,15 +61,41 @@
   margin-left: 5px;
 }
 
+
+.search-results-shipping-text{
+  position: absolute;
+  top:32px;
+  font-size: 12px;
+  left: 13px;
+  color: green;
+  opacity: 0;
+  top: 22px;
+  transition: all 0.25s ease-in-out;
+}
+
+.search-results-product:hover .search-results-shipping-text{
+  top:34px;
+  opacity: 1;
+}
+
+
 .search-results-title {
   font-size: 18px;
   margin: 0;
+  position: relative;
+  top: 0;
 }
+
 
 .search-results-price {
   font-size: 24px;
   margin: 0;
+  transition: all 0.15s ease-in-out;
 }
+
+.search-results-product:hover .search-results-price {
+  color: rgb(115, 115, 255);
+  }
 
 .search-results-price-box {
   padding: 16px 0 32px;
@@ -48,11 +104,40 @@
 .search-results-state {
   font-size: 12px;
   color: rgb(141, 141, 141);
+  text-align: center;
 }
 
-.breadcrumb{
-  color: rgb(141, 141, 141);
-  font-size: 14px;
-  width: 90%;
-  margin: 16px 0 0 0;
+.search-result-icon{
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateX(-50%);
+  right: 60px;
+  color: #eeeeee;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.search-results-product:hover .icon-1{
+  right: 20px;
+  color: #dddddd;
+  opacity: 1;
+}
+
+.search-results-product:hover .icon-2{
+  right: 33px;
+  color: #eeeeee;
+  opacity: 1;
+}
+
+
+/* media querys for responsiveness */
+
+@media (max-width:756px) {
+  .search-results-product {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }

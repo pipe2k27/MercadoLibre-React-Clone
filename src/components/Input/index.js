@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
-const Input = ({
-  onChange,
-  className,
-  style,
-  placeholder,
-  button,
-  onSubmit,
-}) => {
+
+// the input component will be used to create the search bar
+
+const Input = ({ onChange, className, placeholder, button, onSubmit }) => {
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
       // eslint-disable-next-line no-restricted-globals
@@ -41,7 +37,6 @@ const Input = ({
 
 Input.propTypes = {
   onChange: PropTypes.func,
-  style: PropTypes.object,
   placeholder: PropTypes.string,
   className: PropTypes.string,
   button: PropTypes.bool,

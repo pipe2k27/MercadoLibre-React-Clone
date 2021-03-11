@@ -1,3 +1,10 @@
+/**
+ * @function categoryFilter This function returns an array of categories
+ *
+ * @param {array} filters an array of filters
+ * @returns {Array} An array of the diferent stages of the category. From most general to most specific.
+ */
+
 const categoryFilter = (filters) => {
   const filterArray = filters.filter((e) => {
     return e.id === 'category';

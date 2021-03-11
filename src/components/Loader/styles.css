@@ -1,0 +1,11 @@
+.loader{
+    width: 210px;
+    position: relative;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}

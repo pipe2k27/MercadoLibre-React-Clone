@@ -10,4 +10,5 @@
 .search-bar-logo {
   height: 60%;
   margin-right: 25px;
+  cursor: pointer;
 }
